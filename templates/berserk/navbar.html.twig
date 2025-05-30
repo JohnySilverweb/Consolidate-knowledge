@@ -1,0 +1,28 @@
+{% set menu = [
+  {'title': 'Home', 'url': path('berserk_index'), 'active': true},
+  {'title': 'Characters', 'url': path('berserk_cards')},
+  {'title': 'Bestiary', 'url': '../bestiary/bestiary.html'},
+  {'title': 'Form', 'url': path('berserk_form')},
+  {'title': 'Mamga', 'url': '../mamga/mamga.html'}
+] %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand p-0" href="../guts/guts.html">
+      <img src="{{ asset('assets/img/brand.png') }}" height="40" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {% for item in menu %}
+          <li class="nav-item">
+           <a class="nav-link {% if item.active is defined and item.active %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

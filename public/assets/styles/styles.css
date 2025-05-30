@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Animeace';
+  src: url('../fonts/Animeace/animeace2_reg.otf');
+ 
+}
+
+@font-face {
+  font-family: 'Arial Black';
+  src: url('../fonts/Arial_Black/arial_black.ttf')
+}
+
+/* FORN MAIN PAGE */
+body.index_page {
+  background: url("../img/background1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  font-family: 'Animeace', sans-serif;
+}
+
+.logo {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 25rem;
+  height: 13rem;
+}
+
+.discribe {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1px;
+  margin: 0 10%;
+  span {
+  color: red;
+  font-size: 1.8rem;
+  }
+  p {
+  margin: 20px;
+  color: white;
+  font-size: 1.7rem;
+  letter-spacing: 4px
+  }
+}
+
+.discribe + p {
+  padding: 0.2rem;
+  display: inline-block;
+  color: white;
+  margin: 200px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: serif;
+}
+
+/* FORN CARDS PAGE */
+/* body.cards_page {
+} */
+
+.cards {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  background-image: url('../img/card_background.jpg');
+  width: 20rem;
+  height: 30rem;
+  border-radius: 15px;
+  font-family: 'Arial Black';
+  border: 0.1rem solid black;
+  .name {
+    text-align: center;
+  }
+}
+
+.card_content {
+  
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px ;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  p {
+    margin: 0;
+  }
+}
